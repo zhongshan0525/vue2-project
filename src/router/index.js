@@ -45,16 +45,22 @@ export const constantRouterMap = [
     meta: { title: '商品管理', icon: 'goods' },
     children: [
       {
+        path: 'tree',
+        name: 'Tree',
+        component: () => import('@/views/tree/index'),
+        meta: { title: '商品信息管理', icon: 'table' }
+      },
+      {
+        path: 'goodscategory',
+        name: 'goodscategory',
+        component: () => import('@/views/goods/goodscategory'),
+        meta: { title: '商品品类管理', icon: 'goodscategory' }
+      },
+      {
         path: 'table',
         name: 'Table',
         component: () => import('@/views/table/index'),
         meta: { title: '商品目录管理', icon: 'goodslist' }
-      },
-      {
-        path: 'tree',
-        name: 'Tree',
-        component: () => import('@/views/tree/index'),
-        meta: { title: '商品分类管理', icon: 'goodscategory' }
       }
     ]
   },
